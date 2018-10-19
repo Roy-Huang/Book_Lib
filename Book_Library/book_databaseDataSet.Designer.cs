@@ -20,17 +20,17 @@ namespace Book_Library {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("book_libDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("book_databaseDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class book_libDataSet : global::System.Data.DataSet {
+    public partial class book_databaseDataSet : global::System.Data.DataSet {
         
-        private book_libraryDataTable tablebook_library;
+        private BookList_TableDataTable tableBookList_Table;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public book_libDataSet() {
+        public book_databaseDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Book_Library {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected book_libDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected book_databaseDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Book_Library {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["book_library"] != null)) {
-                    base.Tables.Add(new book_libraryDataTable(ds.Tables["book_library"]));
+                if ((ds.Tables["BookList_Table"] != null)) {
+                    base.Tables.Add(new BookList_TableDataTable(ds.Tables["BookList_Table"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Book_Library {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public book_libraryDataTable book_library {
+        public BookList_TableDataTable BookList_Table {
             get {
-                return this.tablebook_library;
+                return this.tableBookList_Table;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Book_Library {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            book_libDataSet cln = ((book_libDataSet)(base.Clone()));
+            book_databaseDataSet cln = ((book_databaseDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Book_Library {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["book_library"] != null)) {
-                    base.Tables.Add(new book_libraryDataTable(ds.Tables["book_library"]));
+                if ((ds.Tables["BookList_Table"] != null)) {
+                    base.Tables.Add(new BookList_TableDataTable(ds.Tables["BookList_Table"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Book_Library {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablebook_library = ((book_libraryDataTable)(base.Tables["book_library"]));
+            this.tableBookList_Table = ((BookList_TableDataTable)(base.Tables["BookList_Table"]));
             if ((initTable == true)) {
-                if ((this.tablebook_library != null)) {
-                    this.tablebook_library.InitVars();
+                if ((this.tableBookList_Table != null)) {
+                    this.tableBookList_Table.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Book_Library {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "book_libDataSet";
+            this.DataSetName = "book_databaseDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/book_libDataSet.xsd";
+            this.Namespace = "http://tempuri.org/book_databaseDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablebook_library = new book_libraryDataTable();
-            base.Tables.Add(this.tablebook_library);
+            this.tableBookList_Table = new BookList_TableDataTable();
+            base.Tables.Add(this.tableBookList_Table);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializebook_library() {
+        private bool ShouldSerializeBookList_Table() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Book_Library {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            book_libDataSet ds = new book_libDataSet();
+            book_databaseDataSet ds = new book_databaseDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,18 +270,18 @@ namespace Book_Library {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void book_libraryRowChangeEventHandler(object sender, book_libraryRowChangeEvent e);
+        public delegate void BookList_TableRowChangeEventHandler(object sender, BookList_TableRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class book_libraryDataTable : global::System.Data.TypedTableBase<book_libraryRow> {
+        public partial class BookList_TableDataTable : global::System.Data.TypedTableBase<BookList_TableRow> {
             
             private global::System.Data.DataColumn columnISBN;
             
-            private global::System.Data.DataColumn columnname;
+            private global::System.Data.DataColumn columnBookName;
             
             private global::System.Data.DataColumn columnauthor;
             
@@ -289,8 +289,8 @@ namespace Book_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public book_libraryDataTable() {
-                this.TableName = "book_library";
+            public BookList_TableDataTable() {
+                this.TableName = "BookList_Table";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +298,7 @@ namespace Book_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal book_libraryDataTable(global::System.Data.DataTable table) {
+            internal BookList_TableDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +315,7 @@ namespace Book_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected book_libraryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BookList_TableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -330,9 +330,9 @@ namespace Book_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn nameColumn {
+            public global::System.Data.DataColumn BookNameColumn {
                 get {
-                    return this.columnname;
+                    return this.columnBookName;
                 }
             }
             
@@ -363,48 +363,48 @@ namespace Book_Library {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public book_libraryRow this[int index] {
+            public BookList_TableRow this[int index] {
                 get {
-                    return ((book_libraryRow)(this.Rows[index]));
+                    return ((BookList_TableRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event book_libraryRowChangeEventHandler book_libraryRowChanging;
+            public event BookList_TableRowChangeEventHandler BookList_TableRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event book_libraryRowChangeEventHandler book_libraryRowChanged;
+            public event BookList_TableRowChangeEventHandler BookList_TableRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event book_libraryRowChangeEventHandler book_libraryRowDeleting;
+            public event BookList_TableRowChangeEventHandler BookList_TableRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event book_libraryRowChangeEventHandler book_libraryRowDeleted;
+            public event BookList_TableRowChangeEventHandler BookList_TableRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Addbook_libraryRow(book_libraryRow row) {
+            public void AddBookList_TableRow(BookList_TableRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public book_libraryRow Addbook_libraryRow(int ISBN, string name, string author, string publishing_house) {
-                book_libraryRow rowbook_libraryRow = ((book_libraryRow)(this.NewRow()));
+            public BookList_TableRow AddBookList_TableRow(int ISBN, string BookName, string author, string publishing_house) {
+                BookList_TableRow rowBookList_TableRow = ((BookList_TableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ISBN,
-                        name,
+                        BookName,
                         author,
                         publishing_house};
-                rowbook_libraryRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowbook_libraryRow);
-                return rowbook_libraryRow;
+                rowBookList_TableRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBookList_TableRow);
+                return rowBookList_TableRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                book_libraryDataTable cln = ((book_libraryDataTable)(base.Clone()));
+                BookList_TableDataTable cln = ((BookList_TableDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -412,14 +412,14 @@ namespace Book_Library {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new book_libraryDataTable();
+                return new BookList_TableDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnISBN = base.Columns["ISBN"];
-                this.columnname = base.Columns["name"];
+                this.columnBookName = base.Columns["BookName"];
                 this.columnauthor = base.Columns["author"];
                 this.columnpublishing_house = base.Columns["publishing_house"];
             }
@@ -429,41 +429,43 @@ namespace Book_Library {
             private void InitClass() {
                 this.columnISBN = new global::System.Data.DataColumn("ISBN", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnISBN);
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname);
+                this.columnBookName = new global::System.Data.DataColumn("BookName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBookName);
                 this.columnauthor = new global::System.Data.DataColumn("author", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnauthor);
                 this.columnpublishing_house = new global::System.Data.DataColumn("publishing_house", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpublishing_house);
-                this.columnname.MaxLength = 10;
+                this.columnISBN.AllowDBNull = false;
+                this.columnBookName.AllowDBNull = false;
+                this.columnBookName.MaxLength = 10;
                 this.columnauthor.MaxLength = 10;
                 this.columnpublishing_house.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public book_libraryRow Newbook_libraryRow() {
-                return ((book_libraryRow)(this.NewRow()));
+            public BookList_TableRow NewBookList_TableRow() {
+                return ((BookList_TableRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new book_libraryRow(builder);
+                return new BookList_TableRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(book_libraryRow);
+                return typeof(BookList_TableRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.book_libraryRowChanged != null)) {
-                    this.book_libraryRowChanged(this, new book_libraryRowChangeEvent(((book_libraryRow)(e.Row)), e.Action));
+                if ((this.BookList_TableRowChanged != null)) {
+                    this.BookList_TableRowChanged(this, new BookList_TableRowChangeEvent(((BookList_TableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -471,8 +473,8 @@ namespace Book_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.book_libraryRowChanging != null)) {
-                    this.book_libraryRowChanging(this, new book_libraryRowChangeEvent(((book_libraryRow)(e.Row)), e.Action));
+                if ((this.BookList_TableRowChanging != null)) {
+                    this.BookList_TableRowChanging(this, new BookList_TableRowChangeEvent(((BookList_TableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -480,8 +482,8 @@ namespace Book_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.book_libraryRowDeleted != null)) {
-                    this.book_libraryRowDeleted(this, new book_libraryRowChangeEvent(((book_libraryRow)(e.Row)), e.Action));
+                if ((this.BookList_TableRowDeleted != null)) {
+                    this.BookList_TableRowDeleted(this, new BookList_TableRowChangeEvent(((BookList_TableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -489,14 +491,14 @@ namespace Book_Library {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.book_libraryRowDeleting != null)) {
-                    this.book_libraryRowDeleting(this, new book_libraryRowChangeEvent(((book_libraryRow)(e.Row)), e.Action));
+                if ((this.BookList_TableRowDeleting != null)) {
+                    this.BookList_TableRowDeleting(this, new BookList_TableRowChangeEvent(((BookList_TableRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Removebook_libraryRow(book_libraryRow row) {
+            public void RemoveBookList_TableRow(BookList_TableRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -505,7 +507,7 @@ namespace Book_Library {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                book_libDataSet ds = new book_libDataSet();
+                book_databaseDataSet ds = new book_databaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -523,7 +525,7 @@ namespace Book_Library {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "book_libraryDataTable";
+                attribute2.FixedValue = "BookList_TableDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -567,46 +569,36 @@ namespace Book_Library {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class book_libraryRow : global::System.Data.DataRow {
+        public partial class BookList_TableRow : global::System.Data.DataRow {
             
-            private book_libraryDataTable tablebook_library;
+            private BookList_TableDataTable tableBookList_Table;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal book_libraryRow(global::System.Data.DataRowBuilder rb) : 
+            internal BookList_TableRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablebook_library = ((book_libraryDataTable)(this.Table));
+                this.tableBookList_Table = ((BookList_TableDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ISBN {
                 get {
-                    try {
-                        return ((int)(this[this.tablebook_library.ISBNColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ISBN\' in table \'book_library\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableBookList_Table.ISBNColumn]));
                 }
                 set {
-                    this[this.tablebook_library.ISBNColumn] = value;
+                    this[this.tableBookList_Table.ISBNColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string name {
+            public string BookName {
                 get {
-                    try {
-                        return ((string)(this[this.tablebook_library.nameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name\' in table \'book_library\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableBookList_Table.BookNameColumn]));
                 }
                 set {
-                    this[this.tablebook_library.nameColumn] = value;
+                    this[this.tableBookList_Table.BookNameColumn] = value;
                 }
             }
             
@@ -615,14 +607,14 @@ namespace Book_Library {
             public string author {
                 get {
                     try {
-                        return ((string)(this[this.tablebook_library.authorColumn]));
+                        return ((string)(this[this.tableBookList_Table.authorColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'author\' in table \'book_library\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'author\' in table \'BookList_Table\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablebook_library.authorColumn] = value;
+                    this[this.tableBookList_Table.authorColumn] = value;
                 }
             }
             
@@ -631,63 +623,39 @@ namespace Book_Library {
             public string publishing_house {
                 get {
                     try {
-                        return ((string)(this[this.tablebook_library.publishing_houseColumn]));
+                        return ((string)(this[this.tableBookList_Table.publishing_houseColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'publishing_house\' in table \'book_library\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'publishing_house\' in table \'BookList_Table\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablebook_library.publishing_houseColumn] = value;
+                    this[this.tableBookList_Table.publishing_houseColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsISBNNull() {
-                return this.IsNull(this.tablebook_library.ISBNColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetISBNNull() {
-                this[this.tablebook_library.ISBNColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsnameNull() {
-                return this.IsNull(this.tablebook_library.nameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetnameNull() {
-                this[this.tablebook_library.nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsauthorNull() {
-                return this.IsNull(this.tablebook_library.authorColumn);
+                return this.IsNull(this.tableBookList_Table.authorColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetauthorNull() {
-                this[this.tablebook_library.authorColumn] = global::System.Convert.DBNull;
+                this[this.tableBookList_Table.authorColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Ispublishing_houseNull() {
-                return this.IsNull(this.tablebook_library.publishing_houseColumn);
+                return this.IsNull(this.tableBookList_Table.publishing_houseColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setpublishing_houseNull() {
-                this[this.tablebook_library.publishing_houseColumn] = global::System.Convert.DBNull;
+                this[this.tableBookList_Table.publishing_houseColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -695,22 +663,22 @@ namespace Book_Library {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class book_libraryRowChangeEvent : global::System.EventArgs {
+        public class BookList_TableRowChangeEvent : global::System.EventArgs {
             
-            private book_libraryRow eventRow;
+            private BookList_TableRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public book_libraryRowChangeEvent(book_libraryRow row, global::System.Data.DataRowAction action) {
+            public BookList_TableRowChangeEvent(BookList_TableRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public book_libraryRow Row {
+            public BookList_TableRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -726,7 +694,7 @@ namespace Book_Library {
         }
     }
 }
-namespace Book_Library.book_libDataSetTableAdapters {
+namespace Book_Library.book_databaseDataSetTableAdapters {
     
     
     /// <summary>
@@ -738,7 +706,7 @@ namespace Book_Library.book_libDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class book_libraryTableAdapter : global::System.ComponentModel.Component {
+    public partial class BookList_TableTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -752,7 +720,7 @@ namespace Book_Library.book_libDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public book_libraryTableAdapter() {
+        public BookList_TableTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -849,19 +817,19 @@ namespace Book_Library.book_libDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "book_library";
+            tableMapping.DataSetTable = "BookList_Table";
             tableMapping.ColumnMappings.Add("ISBN", "ISBN");
-            tableMapping.ColumnMappings.Add("name", "name");
+            tableMapping.ColumnMappings.Add("BookName", "BookName");
             tableMapping.ColumnMappings.Add("author", "author");
             tableMapping.ColumnMappings.Add("publishing_house", "publishing_house");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[book_library] ([ISBN], [name], [author], [publishing_house]) V" +
-                "ALUES (@ISBN, @name, @author, @publishing_house)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[BookList_Table] ([ISBN], [BookName], [author], [publishing_hou" +
+                "se]) VALUES (@ISBN, @BookName, @author, @publishing_house)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ISBN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ISBN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BookName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@author", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "author", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@publishing_house", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "publishing_house", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -870,7 +838,7 @@ namespace Book_Library.book_libDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Book_Library.Properties.Settings.Default.book_libConnectionString;
+            this._connection.ConnectionString = global::Book_Library.Properties.Settings.Default.book_databaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -879,7 +847,7 @@ namespace Book_Library.book_libDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ISBN, name, author, publishing_house FROM dbo.book_library";
+            this._commandCollection[0].CommandText = "SELECT ISBN, BookName, author, publishing_house FROM dbo.BookList_Table";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -887,7 +855,7 @@ namespace Book_Library.book_libDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(book_libDataSet.book_libraryDataTable dataTable) {
+        public virtual int Fill(book_databaseDataSet.BookList_TableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -900,9 +868,9 @@ namespace Book_Library.book_libDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual book_libDataSet.book_libraryDataTable GetData() {
+        public virtual book_databaseDataSet.BookList_TableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            book_libDataSet.book_libraryDataTable dataTable = new book_libDataSet.book_libraryDataTable();
+            book_databaseDataSet.BookList_TableDataTable dataTable = new book_databaseDataSet.BookList_TableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -910,15 +878,15 @@ namespace Book_Library.book_libDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(book_libDataSet.book_libraryDataTable dataTable) {
+        public virtual int Update(book_databaseDataSet.BookList_TableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(book_libDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "book_library");
+        public virtual int Update(book_databaseDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "BookList_Table");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -940,18 +908,13 @@ namespace Book_Library.book_libDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> ISBN, string name, string author, string publishing_house) {
-            if ((ISBN.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ISBN.Value));
+        public virtual int Insert(int ISBN, string BookName, string author, string publishing_house) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ISBN));
+            if ((BookName == null)) {
+                throw new global::System.ArgumentNullException("BookName");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((name == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(name));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(BookName));
             }
             if ((author == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -994,7 +957,7 @@ namespace Book_Library.book_libDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private book_libraryTableAdapter _book_libraryTableAdapter;
+        private BookList_TableTableAdapter _bookList_TableTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1016,12 +979,12 @@ namespace Book_Library.book_libDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public book_libraryTableAdapter book_libraryTableAdapter {
+        public BookList_TableTableAdapter BookList_TableTableAdapter {
             get {
-                return this._book_libraryTableAdapter;
+                return this._bookList_TableTableAdapter;
             }
             set {
-                this._book_libraryTableAdapter = value;
+                this._bookList_TableTableAdapter = value;
             }
         }
         
@@ -1044,9 +1007,9 @@ namespace Book_Library.book_libDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._book_libraryTableAdapter != null) 
-                            && (this._book_libraryTableAdapter.Connection != null))) {
-                    return this._book_libraryTableAdapter.Connection;
+                if (((this._bookList_TableTableAdapter != null) 
+                            && (this._bookList_TableTableAdapter.Connection != null))) {
+                    return this._bookList_TableTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1061,7 +1024,7 @@ namespace Book_Library.book_libDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._book_libraryTableAdapter != null)) {
+                if ((this._bookList_TableTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1073,14 +1036,14 @@ namespace Book_Library.book_libDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(book_libDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(book_databaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._book_libraryTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.book_library.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._bookList_TableTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BookList_Table.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._book_libraryTableAdapter.Update(updatedRows));
+                    result = (result + this._bookList_TableTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1092,13 +1055,13 @@ namespace Book_Library.book_libDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(book_libDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(book_databaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._book_libraryTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.book_library.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._bookList_TableTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BookList_Table.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._book_libraryTableAdapter.Update(addedRows));
+                    result = (result + this._bookList_TableTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1110,13 +1073,13 @@ namespace Book_Library.book_libDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(book_libDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(book_databaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._book_libraryTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.book_library.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._bookList_TableTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BookList_Table.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._book_libraryTableAdapter.Update(deletedRows));
+                    result = (result + this._bookList_TableTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1152,15 +1115,15 @@ namespace Book_Library.book_libDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(book_libDataSet dataSet) {
+        public virtual int UpdateAll(book_databaseDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._book_libraryTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._book_libraryTableAdapter.Connection) == false))) {
+            if (((this._bookList_TableTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._bookList_TableTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1196,13 +1159,13 @@ namespace Book_Library.book_libDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._book_libraryTableAdapter != null)) {
-                    revertConnections.Add(this._book_libraryTableAdapter, this._book_libraryTableAdapter.Connection);
-                    this._book_libraryTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._book_libraryTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._book_libraryTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._book_libraryTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._book_libraryTableAdapter.Adapter);
+                if ((this._bookList_TableTableAdapter != null)) {
+                    revertConnections.Add(this._bookList_TableTableAdapter, this._bookList_TableTableAdapter.Connection);
+                    this._bookList_TableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._bookList_TableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._bookList_TableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._bookList_TableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._bookList_TableTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1263,9 +1226,9 @@ namespace Book_Library.book_libDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._book_libraryTableAdapter != null)) {
-                    this._book_libraryTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._book_libraryTableAdapter]));
-                    this._book_libraryTableAdapter.Transaction = null;
+                if ((this._bookList_TableTableAdapter != null)) {
+                    this._bookList_TableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._bookList_TableTableAdapter]));
+                    this._bookList_TableTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

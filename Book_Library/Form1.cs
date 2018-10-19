@@ -19,17 +19,15 @@ namespace Book_Library
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'book_libDataSet.book_library' table. You can move, or remove it, as needed.
-            this.book_libraryTableAdapter.Fill(this.book_libDataSet.book_library);
-
+            // TODO: This line of code loads data into the 'book_databaseDataSet.BookList_Table' table. You can move, or remove it, as needed.
+            this.bookList_TableTableAdapter.Fill(this.book_databaseDataSet.BookList_Table);
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            int newRegionID = 5;     
+        {   
             try
             {
-                this.book_libraryTableAdapter.Update(this.book_libDataSet.book_library);
+                this.bookList_TableTableAdapter.Update(this.book_databaseDataSet.BookList_Table);
             }
             catch (Exception ex)
             {
@@ -40,7 +38,7 @@ namespace Book_Library
 
         private void RefreshDataset()
         {
-            this.book_libraryTableAdapter.Fill(this.book_libDataSet.book_library);
+            this.bookList_TableTableAdapter.Fill(this.book_databaseDataSet.BookList_Table);
         }
     }
 }

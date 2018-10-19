@@ -8,3 +8,13 @@ C:\Users\Roy\Documents\Visual Studio 2017\Projects\Book_Library\Book_Library\obj
 C:\Users\Roy\Documents\Visual Studio 2017\Projects\Book_Library\Book_Library\obj\Debug\Book_Library.csproj.CoreCompileInputs.cache
 C:\Users\Roy\Documents\Visual Studio 2017\Projects\Book_Library\Book_Library\obj\Debug\Book_Library.exe
 C:\Users\Roy\Documents\Visual Studio 2017\Projects\Book_Library\Book_Library\obj\Debug\Book_Library.pdb
+D:\Git\Book_Lib\Book_Library\bin\Debug\Book_Library.exe.config
+D:\Git\Book_Lib\Book_Library\bin\Debug\Book_Library.exe
+D:\Git\Book_Lib\Book_Library\bin\Debug\Book_Library.pdb
+D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.csprojAssemblyReference.cache
+D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.Form1.resources
+D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.Properties.Resources.resources
+D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.csproj.GenerateResource.cache
+D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.csproj.CoreCompileInputs.cache
+D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.exe
+D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.pdb
