@@ -41,6 +41,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookListTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.book_databaseDataSet)).BeginInit();
@@ -135,6 +136,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.dataGridView2);
             this.groupBox2.Location = new System.Drawing.Point(12, 234);
             this.groupBox2.Name = "groupBox2";
@@ -142,6 +144,16 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "method <2> Use Code Connect";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(455, 21);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(155, 58);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "add_data";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -177,6 +189,7 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button2;
     }
 }
 

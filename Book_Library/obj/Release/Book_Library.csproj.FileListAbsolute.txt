@@ -1,0 +1,11 @@
+D:\Git\Book_Lib\Book_Library\bin\Release\Book_Library.exe.config
+D:\Git\Book_Lib\Book_Library\bin\Release\Book_Library.exe
+D:\Git\Book_Lib\Book_Library\bin\Release\Book_Library.pdb
+D:\Git\Book_Lib\Book_Library\obj\Release\Book_Library.Form1.resources
+D:\Git\Book_Lib\Book_Library\obj\Release\Book_Library.Form2.resources
+D:\Git\Book_Lib\Book_Library\obj\Release\Book_Library.Properties.Resources.resources
+D:\Git\Book_Lib\Book_Library\obj\Release\Book_Library.csproj.GenerateResource.cache
+D:\Git\Book_Lib\Book_Library\obj\Release\Book_Library.csproj.CoreCompileInputs.cache
+D:\Git\Book_Lib\Book_Library\obj\Release\Book_Library.exe
+D:\Git\Book_Lib\Book_Library\obj\Release\Book_Library.pdb
+D:\Git\Book_Lib\Book_Library\obj\Release\Book_Library.csprojAssemblyReference.cache

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Deployment.Application;
+
 
 namespace Book_Library
 {
@@ -16,9 +18,13 @@ namespace Book_Library
         //for method 2-- initial catalog is database table
         string Constr = @"Persist Security Info=False;Integrated Security=true;
                      Initial Catalog=book_database;Server=.\SQLExpress";
-        //--------------
-
-
+        //---relative path sql-----------
+        string localstr = @"Data Source=.\SQLEXPRESS;                        
+                          Integrated Security=True;
+                          AttachDbFilename=|DataDirectory|\book_database.mdf;
+                          Initial Catalog=book_database;
+                          User Instance=True";
+        //AttachDbFilename=" + Application.StartupPath + @"\book_database.mdf;
         public Form1()
         {
             InitializeComponent();
@@ -26,7 +32,7 @@ namespace Book_Library
             //for method 2--
             try
             {
-                SqlConnection con2sql = new SqlConnection(Constr);
+                SqlConnection con2sql = new SqlConnection(localstr);
                 string Sqlstr = "select * from BookList_Table";     //Inquire command
                 SqlDataAdapter da = new SqlDataAdapter(Sqlstr, con2sql); //SqlDataAdapter will be auto connect & close
                 DataSet ds = new DataSet();  //Create dataset to save table
@@ -65,5 +71,13 @@ namespace Book_Library
             this.bookList_TableTableAdapter.Fill(this.book_databaseDataSet.BookList_Table);
         }
         //-------------
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 add_data_view = new Form2();
+            this.Visible = false;
+
+            add_data_view.Visible = true;
+        }
     }
 }

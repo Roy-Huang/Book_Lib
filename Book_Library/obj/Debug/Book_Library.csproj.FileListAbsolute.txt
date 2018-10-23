@@ -18,3 +18,4 @@ D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.csproj.GenerateResource.cach
 D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.csproj.CoreCompileInputs.cache
 D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.exe
 D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.pdb
+D:\Git\Book_Lib\Book_Library\obj\Debug\Book_Library.Form2.resources
