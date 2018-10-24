@@ -37,11 +37,14 @@
             this.textBox_Bookname = new System.Windows.Forms.TextBox();
             this.textBox_author = new System.Windows.Forms.TextBox();
             this.textBox_publishingHouse = new System.Windows.Forms.TextBox();
+            this.pictureBox_book = new System.Windows.Forms.PictureBox();
+            this.button_uploadimg = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_book)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(367, 247);
+            this.button1.Location = new System.Drawing.Point(483, 256);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 58);
             this.button1.TabIndex = 4;
@@ -117,11 +120,32 @@
             this.textBox_publishingHouse.Size = new System.Drawing.Size(291, 22);
             this.textBox_publishingHouse.TabIndex = 12;
             // 
+            // pictureBox_book
+            // 
+            this.pictureBox_book.Location = new System.Drawing.Point(484, 28);
+            this.pictureBox_book.Name = "pictureBox_book";
+            this.pictureBox_book.Size = new System.Drawing.Size(153, 183);
+            this.pictureBox_book.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_book.TabIndex = 13;
+            this.pictureBox_book.TabStop = false;
+            // 
+            // button_uploadimg
+            // 
+            this.button_uploadimg.Location = new System.Drawing.Point(514, 217);
+            this.button_uploadimg.Name = "button_uploadimg";
+            this.button_uploadimg.Size = new System.Drawing.Size(96, 23);
+            this.button_uploadimg.TabIndex = 14;
+            this.button_uploadimg.Text = "Upload_image";
+            this.button_uploadimg.UseVisualStyleBackColor = true;
+            this.button_uploadimg.Click += new System.EventHandler(this.button_uploadimg_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 326);
+            this.ClientSize = new System.Drawing.Size(650, 326);
+            this.Controls.Add(this.button_uploadimg);
+            this.Controls.Add(this.pictureBox_book);
             this.Controls.Add(this.textBox_publishingHouse);
             this.Controls.Add(this.textBox_author);
             this.Controls.Add(this.textBox_Bookname);
@@ -133,6 +157,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form2";
             this.Text = "ADD_DATA";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_book)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +174,7 @@
         private System.Windows.Forms.TextBox textBox_Bookname;
         private System.Windows.Forms.TextBox textBox_author;
         private System.Windows.Forms.TextBox textBox_publishingHouse;
+        private System.Windows.Forms.PictureBox pictureBox_book;
+        private System.Windows.Forms.Button button_uploadimg;
     }
 }
