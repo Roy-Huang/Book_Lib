@@ -43,7 +43,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button_dispimg = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookListTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.book_databaseDataSet)).BeginInit();
@@ -123,8 +123,10 @@
             this.dataGridView2.Location = new System.Drawing.Point(6, 21);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(443, 150);
             this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
             // 
             // groupBox1
             // 
@@ -167,22 +169,16 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // button_dispimg
+            // contextMenuStrip1
             // 
-            this.button_dispimg.Location = new System.Drawing.Point(681, 273);
-            this.button_dispimg.Name = "button_dispimg";
-            this.button_dispimg.Size = new System.Drawing.Size(116, 23);
-            this.button_dispimg.TabIndex = 6;
-            this.button_dispimg.Text = "Display Image";
-            this.button_dispimg.UseVisualStyleBackColor = true;
-            this.button_dispimg.Click += new System.EventHandler(this.button_dispimg_Click);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 423);
-            this.Controls.Add(this.button_dispimg);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -216,7 +212,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button_dispimg;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
